@@ -12,8 +12,8 @@ def env_variable(name, default = None, required = True):
     return value
 
 # Get confguration from the environment variables
-OPENAI_API_KEY = env_variable("OPENAI_API_KEY")
-PINECONE_API_KEY = env_variable("PINECONE_API_KEY")
-PINECONE_ENVIRONMENT = env_variable("PINECONE_ENVIRONMENT")
-PINECONE_TABLE_NAME = env_variable("PINECONE_TABLE_NAME")
-GPT_MODEL = env_variable("GPT_MODEL", default="gpt-3.5-turbo", required=False)
+OPENAI_API_KEY = env_variable('OPENAI_API_KEY')
+PINECONE_API_KEY = env_variable('PINECONE_API_KEY')
+PINECONE_ENVIRONMENT = env_variable('PINECONE_ENVIRONMENT')
+PINECONE_TABLE_NAME = env_variable('PINECONE_TABLE_NAME')
+GPT_MODEL = env_variable('GPT_MODEL', default='gpt-3.5-turbo', required=False)
