@@ -1,0 +1,6 @@
+python-dotenv
+openai
+pinecone-client
+re
+dotenv
+sklearn

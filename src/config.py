@@ -1,8 +1,17 @@
 import os
 from dotenv import load_dotenv
 
+def find_parent_env_file():
+    current_file_directory = os.path.dirname(os.path.abspath(__file__))
+    parent_directory = os.path.dirname(current_file_directory)
+    env_file_path = os.path.join(parent_directory, '.env')
+
+    return env_file_path
+
 # Load environment variables from the .env file 
-load_dotenv()
+env_file_path = find_parent_env_file()
+load_dotenv(dotenv_path=env_file_path)
+
 
 # Retrieve environment variables with default and required options
 def env_variable(name, default = None, required = True):
