@@ -1,6 +1,6 @@
-import memory
+import src.memory as memory
 import openai
-from config import OPENAI_API_KEY
+from src.config import OPENAI_API_KEY
 import re
 
 openai.api_key = OPENAI_API_KEY
@@ -53,7 +53,7 @@ class Chatbot:
                 {'role': 'user', 'content': message},
                 {'role': 'assistant', 'content': response},
                 {'role': 'system', 'content': 'Please rate the importance of remembering the above interaction on a scale from 1 to 10 where 1 is trivial and 10 is very important. Only respond with the number, do not add any commentary.'},
-            ]
+            ],
             temperature=0,
             n=1,
             max_tokens=100

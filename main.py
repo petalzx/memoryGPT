@@ -1,10 +1,10 @@
-import processing
-from config import PINECONE_TABLE_NAME, GPT_MODEL
+import src.processing as processing
+from src.config import PINECONE_TABLE_NAME, GPT_MODEL
 
 def main():
     chatbot = processing.Chatbot()
 
-    print("Chatbot: Hi! I'm your friendly chatbot. How can I assist you today?")
+    print("Chatbot: Hi! I'm MemoryGPT, a chatbot with long-term memory. How can I assist you today?")
 
     while True:
         user_input = input("You: ")
